@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="left">
+        <!-- <img src="C:\web devlopment\html\project 3\image\A.jpg" alt=""> -->
+        <img src="https://cdn.pixabay.com/photo/2017/08/15/16/22/target-2644596_1280.png" alt="">
+        </div>
+    </div>
+    <div class="mid">
+        <ul class="navbar">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="slection">
+        <span>select data</span>
+        </div>
+    <div class=" option-list">
+        <div>english</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    
+    </div>
+    <div class="right">
+        <button class="btn">Call us Now</button>
+        <button class="btn">E-Mail Us</button>
+
+    </div>
+    
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+            </div>
+            <div class="input-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <div class="newsletter">
+            <form>
+                <input type="email" name="E-Mail" id="E- mail" placeholder="Enter your E-mail">
+                <input type="submit" name="submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    if(username === 'admin' && password === 'password') {
+        alert('Login successful!');
+        // Here you can redirect the user to another page
+        window.location.href = "/home";
+    } else {
+        alert('Login failed!');
+        // Here you can clear the input fields
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+    }
+});
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
